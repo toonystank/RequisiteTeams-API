@@ -1,0 +1,7 @@
+com\toonystank\api\events\TeamXpGainedEvent.class
+com\toonystank\api\enums\ChatMode.class
+com\toonystank\api\IRequisiteTeamsAPI.class
+com\toonystank\api\enums\RankPermissions.class
+com\toonystank\api\model\ITeam.class
+com\toonystank\api\model\IRequisitePlayer.class
+com\toonystank\api\model\ITeamLevel.class

@@ -1,4 +1,7 @@
+com\toonystank\api\model\economy\EconomyResponse.class
 com\toonystank\api\events\TeamXpGainedEvent.class
+com\toonystank\api\model\economy\ITeamEconomy.class
+com\toonystank\api\enums\EconomyType.class
 com\toonystank\api\enums\ChatMode.class
 com\toonystank\api\IRequisiteTeamsAPI.class
 com\toonystank\api\enums\RankPermissions.class

@@ -1,5 +1,6 @@
 package com.toonystank.api;
 
+import com.toonystank.api.enums.EconomyType;
 import com.toonystank.api.enums.RankPermissions;
 import com.toonystank.api.events.TeamXpGainedEvent; // We will create this event soon
 import com.toonystank.api.model.IRequisitePlayer; // We will create this interface soon
@@ -81,4 +82,52 @@ public interface IRequisiteTeamsAPI {
      * @return true if XP was successfully added, false if the player is not in a team.
      */
     boolean addXpToPlayerTeam(@NotNull UUID playerUUID, double xpAmount, @NotNull String reason);
+
+    /**
+     * Gets the active economy type for the team system.
+     *
+     * @return The {@link EconomyType} (VAULT, ITEM, or NONE).
+     */
+    @NotNull EconomyType getEconomyType();
+
+    /**
+     * Gets the formatted string for a currency amount.
+     * e.g., "$100.00" or "100 Diamonds"
+     *
+     * @param amount The amount to format.
+     * @return A formatted string, or just the number if economy is disabled.
+     */
+    @NotNull String formatCurrency(double amount);
+
+    /**
+     * Gets a team's bank balance.
+     *
+     * @param teamUUID The UUID of the team.
+     * @return An Optional containing the balance, or empty if team not found.
+     */
+    @NotNull Optional<Double> getTeamBalance(@NotNull UUID teamUUID);
+
+    /**
+     * Deposits currency directly into a team's bank. (System-level)
+     * This does *not* take from a player, it just adds to the team's total.
+     * Ideal for KOTH, quest rewards, etc.
+     *
+     * @param teamUUID The UUID of the team to pay.
+     * @param amount The amount to deposit.
+     * @param reason A reason for the transaction (for logging, e.g., "KOTH_Prize").
+     * @return true if the deposit was successful, false if team not found or amount invalid.
+     */
+    boolean depositToTeamBank(@NotNull UUID teamUUID, double amount, @NotNull String reason);
+
+    /**
+     * Withdraws currency directly from a team's bank. (System-level)
+     * This does *not* give to a player, it just removes from the team's total.
+     * Ideal for shop systems, taxes, etc.
+     *
+     * @param teamUUID The UUID of the team to charge.
+     * @param amount The amount to withdraw.
+     * @param reason A reason for the transaction (for logging, e.g., "Team_Shop_Purchase").
+     * @return true if the withdrawal was successful, false if team not found or insufficient funds.
+     */
+    boolean withdrawFromTeamBank(@NotNull UUID teamUUID, double amount, @NotNull String reason);
 }

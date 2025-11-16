@@ -2,6 +2,9 @@ C:\Users\user\IdeaProjects\RequisiteTeams-Parent\api\src\main\java\com\toonystan
 C:\Users\user\IdeaProjects\RequisiteTeams-Parent\api\src\main\java\com\toonystank\api\model\IRequisitePlayer.java
 C:\Users\user\IdeaProjects\RequisiteTeams-Parent\api\src\main\java\com\toonystank\api\events\TeamXpGainedEvent.java
 C:\Users\user\IdeaProjects\RequisiteTeams-Parent\api\src\main\java\com\toonystank\api\IRequisiteTeamsAPI.java
+C:\Users\user\IdeaProjects\RequisiteTeams-Parent\api\src\main\java\com\toonystank\api\model\economy\ITeamEconomy.java
 C:\Users\user\IdeaProjects\RequisiteTeams-Parent\api\src\main\java\com\toonystank\api\model\ITeam.java
+C:\Users\user\IdeaProjects\RequisiteTeams-Parent\api\src\main\java\com\toonystank\api\enums\EconomyType.java
 C:\Users\user\IdeaProjects\RequisiteTeams-Parent\api\src\main\java\com\toonystank\api\enums\RankPermissions.java
 C:\Users\user\IdeaProjects\RequisiteTeams-Parent\api\src\main\java\com\toonystank\api\model\ITeamLevel.java
+C:\Users\user\IdeaProjects\RequisiteTeams-Parent\api\src\main\java\com\toonystank\api\model\economy\EconomyResponse.java

@@ -37,8 +37,10 @@ public interface ITeam {
 
     /**
      * @return The team's current internal balance.
+     * This value is generic and could represent Vault currency or
+     * an item count, depending on the plugin's configuration.
      */
-    int getTeamBalance();
+    double getTeamBalance();
 
     /**
      * @return An Optional containing the team's home location, or empty if not set.

@@ -1,6 +1,6 @@
 package com.toonystank.api.model;
 
-import com.toonystank.api.events.TeamXpGainedEvent; // We will create this
+import com.toonystank.api.events.TeamXpGainedEvent;
 import org.bukkit.Location;
 import org.bukkit.inventory.ItemStack;
 import org.jetbrains.annotations.NotNull;
@@ -60,7 +60,7 @@ public interface ITeam {
     /**
      * @return The team's level and XP information.
      */
-    @NotNull ITeamLevel getTeamLevel(); // We will create ITeamLevel soon
+    @NotNull ITeamLevel getTeamLevel();
 
     /**
      * Checks if a player is a member of this team.

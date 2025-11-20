@@ -1,6 +1,6 @@
 package com.toonystank.api.model;
 
-import com.toonystank.api.events.TeamXpGainedEvent; // We will create this
+import com.toonystank.api.events.TeamXpGainedEvent;
 import org.bukkit.Location;
 import org.bukkit.inventory.ItemStack;
 import org.jetbrains.annotations.NotNull;
@@ -37,8 +37,6 @@ public interface ITeam {
 
     /**
      * @return The team's current internal balance.
-     * This value is generic and could represent Vault currency or
-     * an item count, depending on the plugin's configuration.
      */
     double getTeamBalance();
 
@@ -60,7 +58,12 @@ public interface ITeam {
     /**
      * @return The team's level and XP information.
      */
-    @NotNull ITeamLevel getTeamLevel(); // We will create ITeamLevel soon
+    @NotNull ITeamLevel getTeamLevel();
+
+    /**
+     * @return An unmodifiable list of recent team activities.
+     */
+    @NotNull List<ITeamActivity> getActivityLog();
 
     /**
      * Checks if a player is a member of this team.
@@ -76,7 +79,7 @@ public interface ITeam {
      * This will fire a {@link TeamXpGainedEvent}.
      *
      * @param amount The amount of XP to add.
-     * @param reason A simple string tag for why XP was added (e.g., "Admin_Command")
+     * @param reason A simple string tag for why XP was added.
      */
     void addXp(double amount, @NotNull String reason);
 }

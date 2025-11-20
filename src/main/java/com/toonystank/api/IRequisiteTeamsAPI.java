@@ -2,9 +2,9 @@ package com.toonystank.api;
 
 import com.toonystank.api.enums.EconomyType;
 import com.toonystank.api.enums.RankPermissions;
-import com.toonystank.api.events.TeamXpGainedEvent; // We will create this event soon
-import com.toonystank.api.model.IRequisitePlayer; // We will create this interface soon
-import com.toonystank.api.model.ITeam; // We will create this interface soon
+import com.toonystank.api.events.TeamXpGainedEvent;
+import com.toonystank.api.model.IRequisitePlayer;
+import com.toonystank.api.model.ITeam;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Optional;

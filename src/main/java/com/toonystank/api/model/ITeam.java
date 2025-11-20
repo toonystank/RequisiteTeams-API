@@ -37,6 +37,8 @@ public interface ITeam {
 
     /**
      * @return The team's current internal balance.
+     * This value is generic and could represent Vault currency or
+     * an item count, depending on the plugin's configuration.
      */
     double getTeamBalance();
 
@@ -61,11 +63,6 @@ public interface ITeam {
     @NotNull ITeamLevel getTeamLevel();
 
     /**
-     * @return An unmodifiable list of recent team activities.
-     */
-    @NotNull List<ITeamActivity> getActivityLog();
-
-    /**
      * Checks if a player is a member of this team.
      *
      * @param playerUUID The UUID of the player to check.
@@ -79,7 +76,7 @@ public interface ITeam {
      * This will fire a {@link TeamXpGainedEvent}.
      *
      * @param amount The amount of XP to add.
-     * @param reason A simple string tag for why XP was added.
+     * @param reason A simple string tag for why XP was added (e.g., "Admin_Command")
      */
     void addXp(double amount, @NotNull String reason);
 }

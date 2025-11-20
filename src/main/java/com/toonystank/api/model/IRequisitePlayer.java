@@ -35,7 +35,7 @@ public interface IRequisitePlayer {
     /**
      * @return The player's rank within their team, or null if not in a team.
      */
-    @Nullable String getRankName(); // Returning a String is safer than the full Rank record in the API
+    @Nullable String getRankName();
 
     /**
      * @return The player's current chat mode.
